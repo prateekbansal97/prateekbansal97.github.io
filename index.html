@@ -6,64 +6,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek Bansal - Computational Chemist</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d39e7e43d9.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #f0f0f0;
+            /* Set the background color */
+            line-height: 1.6;
+            /* Increase line height for text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 0 25%;
+            /* Adding empty space on left and right */
+        }
+
+        .profile-pic {
+            flex: 1;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .profile-pic h1,
+        .profile-pic h2,
+        .profile-pic h3 {
+            margin: 0;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #000;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .description {
+            flex: 2;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .nav-header {
+            font-size: 1.2rem;
+        }
+
+        .lists {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 25%;
+            gap: 20px; /* Add gap between the columns */
+        }
+
+        .lists ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+
+        footer {
+            margin-top: auto;
+            background: #f0f0f0;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Prateek Bansal</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html" class="nav-header">Prateek Bansal</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section id="home">
-        <h2>Welcome to My Website</h2>
-        <p>I'm Prateek Bansal, a PhD candidate specializing in computational chemistry. Explore my work and
-            achievements.</p>
+    <section id="home" class="container">
+        <div class="profile-pic">
+            <img src="profile.jpg" alt="Prateek Bansal">
+            <h1>Prateek Bansal</h1>
+            <h2> PhD Candidate</h2>
+            <h3> University of Illinois, Urbana-Champaign</h3>
+            <div class="social-icons">
+                <a href="https://twitter.com/thepdbguy" target="_blank" rel="noopener" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/prateek-bansal97/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=B0OVVlEAAAAJ&hl=en" target="_blank" rel="noopener"
+                    aria-label="Google Scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="mailto:pdb3@illinois.edu" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="description">
+            <h1>About me</h1>
+            <p>Hello! I'm Prateek Bansal, a PhD candidate at the University of Illinois, Urbana-Champaign (UIUC),
+                specializing in computational chemistry. My research focuses on molecular modeling, simulations, and the
+                application of machine learning techniques to solve complex biochemical problems.</p>
+            <p>I am passionate about education and outreach, having served as the Head Lab Assistant for the CURIE
+                Summer Camp at UIUC.</p>
+            <p>Feel free to reach out to me via email at <a href="mailto:pdb3@illinois.edu">pdb3@illinois.edu</a> or
+                connect with me on <a href="https://scholar.google.com/citations?user=B0OVVlEAAAAJ&hl=en"
+                    target="_blank" rel="noopener">Google Scholar</a> and <a href="https://www.linkedin.com"
+                    target="_blank" rel="noopener">LinkedIn</a>.</p>
+        </div>
     </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Details about your background, education, and interests.</p>
-    </section>
-    <section id="research">
-        <h2>Research</h2>
-        <p>Information about your research projects and experience.</p>
-    </section>
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><a href="https://pubs.acs.org/doi/full/10.1021/acscentsci.2c00730">Publication 1</a></li>
-            <li><a href="https://www.biorxiv.org/content/10.1101/2022.06.07.493647v2">Publication 2</a></li>
-            <!-- Add more publications as needed -->
-        </ul>
-    </section>
-    <section id="cv">
-        <h2>CV</h2>
-        <p><a href="Prateek_Bansal_Resume-11.pdf" download>Download my CV</a></p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="https://formspree.io/f/{your_form_id}" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="_replyto" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p>Email: pdb3 at illinois dot edu</p>
-    </section>
+    <!-- <section class="lists">
+        <div>
+            <h2>Interests</h2>
+            <ul>
+                <li>Computational Chemistry</li>
+                <li>Molecular Modeling</li>
+                <li>Machine Learning</li>
+                <li>Biochemical Problems</li>
+                <li>Education</li>
+                <li>Outreach</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Machine Learning (scikit-learn, PyTorch)</li>
+                <li>Autodock, RosettaDock</li>
+                <li>Amber, OpenMM, GROMACS, NAMD</li>
+                <li>VMD, PyMOL, Chimera</li>
+                <li>Markov State Models</li>
+                <li>Mutual Information Calculations</li>
+            </ul>
+        </div>
+    </section> -->
     <footer>
         <p>&copy; 2024 Prateek Bansal. All rights reserved.</p>
-        <p>Find me on <a href="https://scholar.google.com/citations?user=B0OVVlEAAAAJ&hl=en">Google Scholar</a> | <a
-                href="https://www.linkedin.com">LinkedIn</a></p>
     </footer>
 </body>
 
