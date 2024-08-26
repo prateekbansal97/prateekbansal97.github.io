@@ -11,10 +11,12 @@ body {
 
 header,
 footer {
+
     background-color: #003366;
     color: white;
     padding: 1rem;
     text-align: center;
+
 }
 
 footer {
@@ -29,6 +31,39 @@ footer {
     padding: 20px;
     margin: 0 25%;
 }
+
+.container2 {
+    /* display: flex; */
+    align-items: center;
+    padding: 20px;
+    margin: 20% 20% 0% 20%;
+}
+
+.container3 {
+    /* display: flex; */
+    align-items: center;
+    padding: 20px;
+    margin: 20% 20% 0% 20%;
+}
+
+.container4 {
+    /* display: flex; */
+    align-items: center;
+    padding: 20px;
+    margin: 20% 20% 0% 20%;
+}
+
+.container5 {
+    /* display: flex; */
+    align-items: center;
+    padding: 20px;
+    margin: 20% 20% 0% 20%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 .profile-pic {
     flex: 1;
@@ -51,6 +86,13 @@ footer {
 .description {
     flex: 2;
     margin-left: 20px;
+    font-size: 20px;
+}
+
+.about_description, 
+.research_description,
+.outreach_description,
+.contact_description {
     font-size: 20px;
 }
 
@@ -81,11 +123,23 @@ nav ul {
 nav ul li {
     margin: 0 5px;
 }
-
+/* 
 nav ul li a {
     color: #000;
     text-decoration: none;
+} */
+
+nav ul li a {
+    color: #ffffff;
+    /* Make header text always white */
+    text-decoration: none;
 }
+
+nav ul li a:hover {
+    color: #cccccc;
+    /* Optional: A lighter shade for hover effect */
+}
+
 
 /* Lists */
 .lists {
@@ -129,7 +183,7 @@ body.dark-mode nav ul li a {
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
-    color: #000;
+    color: #ffffff;
     transition: color 0.3s ease;
 }
 
