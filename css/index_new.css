@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 0 25%;
+}
+
+.profile-pic {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+.profile-pic img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+.profile-pic h1,
+.profile-pic h2,
+.profile-pic h3 {
+    margin: 0;
+}
+
+.description {
+    flex: 2;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #000;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Navigation */
+.nav-header {
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Lists */
+.lists {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 25%;
+    gap: 20px;
+}
+
+.lists ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .profile-pic,
+body.dark-mode .description {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .profile-pic img {
+    border-color: #ffffff;
+}
+
+body.dark-mode .social-icons a,
+body.dark-mode nav ul li a {
+    color: #ffffff;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #dark-mode-toggle {
+    color: #ffffff;
+}
+
+#dark-mode-toggle:hover {
+    color: #007bff;
+}

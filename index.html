@@ -5,117 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prateek Bansal - Computational Chemist</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <script src="https://kit.fontawesome.com/d39e7e43d9.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-            background-color: #f0f0f0;
-            /* Set the background color */
-            line-height: 1.6;
-            /* Increase line height for text */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-        body.dark-mode {
-            background-color: #121212;
-            color: #ffffff;
-        }
-        
-        
-        body.dark-mode .profile-pic {
-            background-color: #1e1e1e; /* Ensure profile section background changes */
-        }
-        
-        body.dark-mode .description {
-            background-color: #1e1e1e; /* Ensure profile section background changes */
-        }
-
-
-        body.dark-mode .profile-pic img {
-            border: 2px solid #ffffff; /* Adjust image borders if needed */
-        }
-
-        nav ul.dark-mode {
-            background-color: #333333;
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            margin: 0 25%;
-            /* Adding empty space on left and right */
-        }
-
-        .profile-pic {
-            flex: 1;
-            max-width: 200px;
-            text-align: center;
-        }
-
-        .profile-pic img {
-            width: 100%;
-            border-radius: 50%;
-        }
-
-        .profile-pic h1,
-        .profile-pic h2,
-        .profile-pic h3 {
-            margin: 0;
-        }
-
-        .social-icons {
-            margin-top: 10px;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            color: #000;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        .description {
-            flex: 2;
-            margin-left: 20px;
-            font-size: 20px;
-        }
-
-        .nav-header {
-            font-size: 1.2rem;
-        }
-
-        .lists {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 25%;
-            gap: 20px; /* Add gap between the columns */
-        }
-
-        .lists ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-
-        footer {
-            margin-top: auto;
-            background: #f0f0f0;
-            padding: 10px 0;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index_new.css">
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <button id="dark-mode-toggle">Toggle Dark Mode</button></li>
-                <li><a href="index.html" class="nav-header">Prateek Bansal</a></li>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+            </button>                
+            <li><a href="index.html" class="nav-header">Prateek Bansal</a></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
@@ -127,7 +29,7 @@
     </header>
     <section id="home" class="container">
         <div class="profile-pic">
-            <img src="profile.jpg" alt="Prateek Bansal">
+            <img src="img/profile.jpg" alt="Prateek Bansal">
             <h1>Prateek Bansal</h1>
             <h2> PhD Candidate</h2>
             <h3> University of Illinois, Urbana-Champaign</h3>
@@ -161,35 +63,11 @@
                     target="_blank" rel="noopener">LinkedIn</a>.</p>
         </div>
     </section>
-    <!-- <section class="lists">
-        <div>
-            <h2>Interests</h2>
-            <ul>
-                <li>Computational Chemistry</li>
-                <li>Molecular Modeling</li>
-                <li>Machine Learning</li>
-                <li>Biochemical Problems</li>
-                <li>Education</li>
-                <li>Outreach</li>
-            </ul>
-        </div>
-        <div>
-            <h2>Skills</h2>
-            <ul>
-                <li>Python</li>
-                <li>Machine Learning (scikit-learn, PyTorch)</li>
-                <li>Autodock, RosettaDock</li>
-                <li>Amber, OpenMM, GROMACS, NAMD</li>
-                <li>VMD, PyMOL, Chimera</li>
-                <li>Markov State Models</li>
-                <li>Mutual Information Calculations</li>
-            </ul>
-        </div>
-    </section> -->
     <footer>
         <p>&copy; 2024 Prateek Bansal. All rights reserved.</p>
     </footer>
-    <script src="dark-mode-toggle.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/dark-mode-toggle.js"></script>
 </body>
 
 </html>
