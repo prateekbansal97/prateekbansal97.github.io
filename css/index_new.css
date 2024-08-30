@@ -194,3 +194,63 @@ body.dark-mode #dark-mode-toggle {
 #dark-mode-toggle:hover {
     color: #007bff;
 }
+
+.publications-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    overflow: hidden;
+    width: 90%;
+    margin: 20 auto;
+}
+
+.publication {
+    border: 2px solid #000000;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+/* .publication .author-info {
+    
+} */
+
+.publication img {
+    width: 100%;
+    max-height: 150px;
+    margin: 10px auto;
+    display: block;
+    object-fit: contain;
+    height: auto;
+}
+
+.publication .category {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 2px 5px 0px 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.category.md {
+    background-color: #007bff;
+    /* Blue for MD */
+}
+
+.category.ai {
+    background-color: #28a745;
+    /* Green for AI */
+}
+
+.category.experiment {
+    background-color: #ffc107;
+    /* Yellow for Experiments */
+}

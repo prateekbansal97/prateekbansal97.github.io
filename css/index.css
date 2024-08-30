@@ -162,3 +162,72 @@ body.dark-mode #dark-mode-toggle {
     color: #007bff;
     /* Example hover color */
 }
+
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    /* Space between publication boxes */
+    justify-items: center;
+    /* Center the boxes within the grid */
+    padding: 20px;
+    /* Add some padding around the grid */
+    overflow: hidden;
+    /* Prevents any overflowing content */
+}
+
+.publication {
+    border: 2px solid #ccc;
+    /* Border for the box */
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    /* Take full width of the grid column */
+    max-width: 300px;
+    /* Max width to prevent too wide boxes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for effect */
+    background-color: #fff;
+    /* Background color of the box */
+    position: relative;
+    /* Position for category label */
+    text-align: center;
+    /* Center-align content inside the box */
+    overflow: hidden;
+    /* Ensure content doesn't overflow the box */
+}
+.publication img {
+    height: 200px;
+    width: 300px;
+}
+
+.publication .category {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.category.md {
+    background-color: #007bff;
+    /* Blue for MD */
+}
+
+.category.ai {
+    background-color: #28a745;
+    /* Green for AI */
+}
+
+.category.experiment {
+    background-color: #ffc107;
+    /* Yellow for Experiments */
+}
+
+.SMOActivation img {
+    height: 200px;
+    width: 300px;
+}
