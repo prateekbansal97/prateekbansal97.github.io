@@ -254,3 +254,23 @@ body.dark-mode #dark-mode-toggle {
     background-color: #ffc107;
     /* Yellow for Experiments */
 }
+
+
+.embed-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 20px;
+}
+
+.embed-container blockquote,
+.embed-container iframe {
+   flex: 1 1 50%; /* Allows both elements to take up equal space */
+   max-width: 500px;
+}
+
+.embed-container iframe {
+   height: 720px;
+}
+
