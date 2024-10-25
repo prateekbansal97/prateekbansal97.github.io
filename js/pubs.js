@@ -17,15 +17,15 @@ const publications = [
         category: "md",
         link: "https://www.sciencedirect.com/science/article/pii/S0006349523001601"
     },
-    // {
-    //     title: "Title of Paper 3",
-    //     image: "path/to/image3.jpg",
-    //     authors: "Your Name, Co-author Name, etc.",
-    //     journal: "Journal Name",
-    //     year: "2023",
-    //     category: "experiment",
-    //     link: "link_to_paper_3"
-    // }
+    {
+         title: "Cyclopamine modulates smoothened receptor activity in a binding position dependent manner",
+         image: "img/WebsiteImage_Cyclopamine.webp",
+         authors: "Kihong, K., Bansal, P., Shukla, D.",
+         journal: "Communications Biology",
+         year: "2024",
+         category: "md",
+         link: "https://www.nature.com/articles/s42003-024-06906-y"
+    }
 ];
 
 const publicationsGrid = document.getElementById('publications-grid');
