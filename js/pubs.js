@@ -25,6 +25,15 @@ const publications = [
          year: "2024",
          category: "md",
          link: "https://www.nature.com/articles/s42003-024-06906-y"
+    },
+    {
+         title: "Multiple modes of cholesterol translocation in the human Smoothened receptor",
+         image: "img/WebsiteImage_CholesterolTrans.png",
+         authors: "Bansal, P., Kinnebrew, M., Rohatgi, R., Shukla, D.",
+         journal: "Under Review at PNAS",
+         year: "2024",
+         category: "md",
+         link: "https://www.biorxiv.org/content/10.1101/2024.11.25.625241v3"
     }
 ];
 
