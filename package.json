@@ -7,7 +7,7 @@
   "packageManager": "npm@11.6.2",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/build-rss.mjs",
+    "build": "astro build",
     "preview": "astro preview",
     "format": "prettier --write .",
     "lint": "biome check --write . || true",
@@ -19,7 +19,6 @@
     "astro": "latest",
     "@astrojs/tailwind": "latest",
     "@astrojs/sitemap": "latest",
-    "@astrojs/rss": "latest",
     "tailwindcss": "latest",
     "@tailwindcss/typography": "latest",
     "autoprefixer": "latest",
