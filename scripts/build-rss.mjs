@@ -1,7 +1,7 @@
 import { writeFileSync, readFileSync } from 'fs';
 import { rss } from '@astrojs/rss';
 
-const site = 'https://your-domain.com';
+const site = 'https://prateekbansal97.github.io/';
 const pubs = JSON.parse(readFileSync('src/content/publications.json', 'utf8'));
 
 const xml = rss({
