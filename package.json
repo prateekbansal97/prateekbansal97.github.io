@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "lint": "biome check --write . || true",
     "update:github": "node scripts/update-github.mjs",
-    "update:scholar": "node scripts/update-scholar.mjs"
+    "update:scholar": "node scripts/update-scholar.mjs",
+    "prebuild": "sh -c 'if [ -n \"$GITHUB_TOKEN\" ]; then node scripts/update-github.mjs; fi; if [ -n \"$SERPAPI_KEY\" ]; then node scripts/update-scholar.mjs; fi'"
   },
   "dependencies": {
     "astro": "latest",

@@ -25,9 +25,15 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
+      # Use npm ci if lockfile exists; otherwise fall back to install
+      - name: Install deps (ci)
+        if: ${{ hashFiles('package-lock.json') != '' }}
+        run: npm ci
+      - name: Install deps (no lockfile)
+        if: ${{ hashFiles('package-lock.json') == '' }}
+        run: npm install --no-audit --no-fund
 
-      # Optional: auto-refresh dynamic content if secrets provided
+      # Optional: fetch content; this script is safe (does nothing) without secrets
       - name: Prebuild content (optional)
         run: npm run prebuild
         env:
