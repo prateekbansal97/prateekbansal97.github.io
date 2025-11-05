@@ -1,10 +1,29 @@
 import { writeFileSync, readFileSync } from 'fs';
-import { rss } from '@astrojs/rss';
+import rss from '@astrojs/rss'; // ✅ default import
 
-const site = 'https://prateekbansal97.github.io/';
+const site = process.env.SITE_URL || 'https://prateekbansal97.github.io';
 const pubs = JSON.parse(readFileSync('src/content/publications.json', 'utf8'));
 
-const xml = rss({
+async function getXmlFromRss(result) {
+  // Some versions return a Response; some may return a string.
+  if (typeof result === 'string') return result;
+
+  if (result && typeof result.text === 'function') {
+    // Standard Web Response (undici)
+    return await result.text();
+  }
+
+  // Fallback: stream body (rare)
+  if (result && result.body) {
+    const chunks = [];
+    for await (const chunk of result.body) chunks.push(Buffer.from(chunk));
+    return Buffer.concat(chunks).toString('utf8');
+  }
+
+  throw new Error('Unexpected return from @astrojs/rss');
+}
+
+const res = rss({
   title: 'Publications — Prateek Bansal',
   description: 'Latest publications and preprints',
   site,
@@ -14,7 +33,8 @@ const xml = rss({
     link: p.url || site,
     description: `${p.authors} (${p.year}). ${p.venue}.`
   }))
-}).body;
+});
 
-writeFileSync('dist/rss.xml', xml);
+const xml = await getXmlFromRss(res);
+writeFileSync('dist/rss.xml', xml, 'utf8');
 console.log('Built RSS feed at dist/rss.xml');
