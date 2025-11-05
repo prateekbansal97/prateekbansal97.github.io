@@ -1,0 +1,35 @@
+---
+const { project } = Astro.props;
+/** project: { name, description, url, stargazerCount, forkCount, primaryLanguage, topics[] } */
+---
+<a href={project.url} class="card block p-5 hover:shadow-md transition" rel="noopener" target="_blank">
+  <div class="flex items-start justify-between gap-4 flex-wrap"> <!-- allow wrapping -->
+    <h3
+      class="text-lg font-semibold min-w-0 flex-1 break-words hyphens-auto"
+      style="word-break: break-word;"
+    >
+      {project.name}
+    </h3>
+    {project.primaryLanguage && (
+      <span
+        class="text-xs rounded-full px-2 py-0.5 border border-black/10 shrink-0"
+        style={`--dot:${project.primaryLanguage.color || '#999'};`}
+      >
+        {project.primaryLanguage.name}
+      </span>
+    )}
+  </div>
+
+  {project.description && (
+    <p class="mt-2 text-sm text-[color:var(--muted)]">{project.description}</p>
+  )}
+
+  <div class="mt-3 flex flex-wrap gap-2">
+    {project.topics?.map((t) => <span class="text-xs rounded bg-black/5 px-2 py-0.5">{t}</span>)}
+  </div>
+
+  <div class="mt-4 text-xs text-[color:var(--muted)]">
+    {project.stargazerCount > 0 && <>⭐ {project.stargazerCount}</>}
+    {project.forkCount > 0 && <>{project.stargazerCount > 0 ? ' · ' : ''}🍴 {project.forkCount}</>}
+  </div>
+</a>

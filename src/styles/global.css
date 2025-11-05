@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base reset + academic tone */
+:root {
+  --bg: #faf8f5;
+  --fg: #0b0f14;
+  --muted: #5b616e;
+  --accent: #0ea5a3;
+  --accent2: #7c3aed;
+}
+:root.dark {
+  --bg: #0b0f14;
+  --fg: #e7e6e3;
+  --muted: #a4a9b3;
+  --accent: #34e3dd;
+  --accent2: #a78bfa;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  @apply font-sans antialiased;
+}
+
+/* Focus styles */
+:focus-visible { outline: 2px dashed var(--accent); outline-offset: 2px; }
+
+/* Print-friendly CV */
+@media print {
+  @page { margin: 1in; }
+  a { text-decoration: none; color: inherit; }
+  .no-print { display: none !important; }
+  .print-block { page-break-inside: avoid; }
+}
+
+/* Nice container */
+.container { @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8; }
+
+/* Card */
+.card {
+  @apply rounded-xl border border-black/5 bg-white/70 dark:bg-white/5 shadow-sm backdrop-blur;
+}

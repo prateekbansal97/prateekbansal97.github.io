@@ -1,0 +1,46 @@
+---
+import Base from '@/layouts/Base.astro';
+import profile from '@/content/profile.json';
+import publications from '@/content/publications.json';
+import highlights from '@/content/highlights.json';
+const title = `${profile.name} — CV`;
+---
+<Base title={title} description={`${profile.name} — Curriculum Vitae`} url={profile.site}>
+  <section class="print-block">
+    <h1 class="text-3xl font-serif font-bold">{profile.name}</h1>
+    <div class="mt-1 text-sm text-[color:var(--muted)]">
+      {profile.role} · {profile.location} · <a class="underline" href={`mailto:${profile.email}`}>{profile.email}</a>
+    </div>
+  </section>
+
+  <section class="mt-8 print-block">
+    <h2 class="text-xl font-semibold">Highlights</h2>
+    <ul class="mt-2 space-y-1 text-sm">
+      {highlights.map((h) => <li>• <strong>{h.date}</strong> — {h.title}{h.description ? ` — ${h.description}` : ''}</li>)}
+    </ul>
+  </section>
+
+  <section class="mt-8 print-block">
+    <h2 class="text-xl font-semibold">Publications</h2>
+    <ol class="mt-2 space-y-3 list-decimal list-inside">
+      {publications.map((p) => (
+        <li>
+          <div class="font-medium">{p.title}</div>
+          <div class="text-sm text-[color:var(--muted)]">{p.authors} ({p.year}). <em>{p.venue}</em>.</div>
+        </li>
+      ))}
+    </ol>
+    <p class="mt-3 text-sm">
+      Full list: <a class="underline" href="/#publications">Website</a> · <a class="underline" href="/publications.bib">BibTeX</a>
+    </p>
+  </section>
+
+  <section class="mt-8 print-block">
+    <h2 class="text-xl font-semibold">Links</h2>
+    <ul class="mt-2 text-sm">
+      <li>GitHub: <a class="underline" href={profile.links.github}>{profile.links.github}</a></li>
+      <li>Google Scholar: <a class="underline" href={profile.links.scholar}>{profile.links.scholar}</a></li>
+      <li>LinkedIn: <a class="underline" href={profile.links.linkedin}>{profile.links.linkedin}</a></li>
+    </ul>
+  </section>
+</Base>

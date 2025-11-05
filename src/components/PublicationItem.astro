@@ -1,0 +1,14 @@
+---
+/** pub: { title, authors, venue, year, url, pdf, code, citation } */
+const { pub } = Astro.props;
+---
+<li class="print-block">
+  <div class="font-medium">{pub.title}</div>
+  <div class="text-sm text-[color:var(--muted)]">{pub.authors} ({pub.year}). <em>{pub.venue}</em>.</div>
+  <div class="mt-1 flex flex-wrap gap-3 text-sm">
+    {pub.url && <a href={pub.url} class="underline" target="_blank" rel="noopener">Page</a>}
+    {pub.pdf && <a href={pub.pdf} class="underline" target="_blank" rel="noopener">PDF</a>}
+    {pub.code && <a href={pub.code} class="underline" target="_blank" rel="noopener">Code</a>}
+    {pub.citation && <button class="underline" onclick={`navigator.clipboard.writeText(${JSON.stringify(pub.citation)})`}>Copy BibTeX</button>}
+  </div>
+</li>

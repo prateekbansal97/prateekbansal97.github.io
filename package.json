@@ -1,0 +1,39 @@
+{
+  "name": "prateekbansal-website",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18.18" },           
+  "packageManager": "npm@11.6.2",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/build-rss.mjs",
+    "preview": "astro preview",
+    "format": "prettier --write .",
+    "lint": "biome check --write . || true",
+    "update:github": "node scripts/update-github.mjs",
+    "update:scholar": "node scripts/update-scholar.mjs"
+  },
+  "dependencies": {
+    "astro": "latest",
+    "@astrojs/tailwind": "latest",
+    "@astrojs/sitemap": "latest",
+    "@astrojs/rss": "latest",
+    "tailwindcss": "latest",
+    "@tailwindcss/typography": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "reading-time": "latest",
+    "zod": "latest",
+    "marked": "latest",
+    "gray-matter": "latest",
+    "cheerio": "latest",
+    "cross-fetch": "latest",
+    "dotenv": "latest"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "latest",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest"
+  }
+}

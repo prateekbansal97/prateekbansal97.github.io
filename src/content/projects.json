@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Allostery_Pred",
+    "description": "Repository for predicting allosteric pathways from protein simulations",
+    "url": "https://github.com/prateekbansal97/Allostery_Pred",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Shell",
+      "color": "#89e051"
+    },
+    "topics": []
+  },
+  {
+    "name": "ml_from_scratch",
+    "description": "Machine Learning implemented in numpy, from scratch, for conceptual clarity.",
+    "url": "https://github.com/prateekbansal97/ml_from_scratch",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "C++",
+      "color": "#f34b7d"
+    },
+    "topics": []
+  },
+  {
+    "name": "Smoothened_Activation",
+    "description": null,
+    "url": "https://github.com/prateekbansal97/Smoothened_Activation",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Python",
+      "color": "#3572A5"
+    },
+    "topics": []
+  },
+  {
+    "name": "Bansal_et_al_Cholesterol_Smoothened_2024",
+    "description": null,
+    "url": "https://github.com/ShuklaGroup/Bansal_et_al_Cholesterol_Smoothened_2024",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Jupyter Notebook",
+      "color": "#DA5B0B"
+    },
+    "topics": []
+  },
+  {
+    "name": "Bansal_et_al_Smoothened_Activation_2022",
+    "description": "Files relevant to analysis of manuscript by Bansal et al., titled 'Activation Mechanism of the Human Smoothened Receptor'",
+    "url": "https://github.com/ShuklaGroup/Bansal_et_al_Smoothened_Activation_2022",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Python",
+      "color": "#3572A5"
+    },
+    "topics": []
+  },
+  {
+    "name": "Differential_equations_mRNA_Protein",
+    "description": "Solving Differential equations for quantifying mRNA and Protein Expression",
+    "url": "https://github.com/prateekbansal97/Differential_equations_mRNA_Protein",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Jupyter Notebook",
+      "color": "#DA5B0B"
+    },
+    "topics": []
+  }
+]
