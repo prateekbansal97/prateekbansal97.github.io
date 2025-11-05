@@ -21,7 +21,9 @@ const description = profile.tagline;
         <a class="underline" href={profile.links.scholar}>Google Scholar</a>
         <a class="underline" href={profile.links.linkedin}>LinkedIn</a>
         {profile.cv && <a class="underline" href={profile.cv}>CV</a>}
-        <a class="underline" href="mailto:{profile.email}">Email</a>
+        {profile.email && (
+          <a class="underline" href={`mailto:${profile.email}`}>Email</a>
+        )}
       </div>
     </div>
     <aside class="card p-6">
