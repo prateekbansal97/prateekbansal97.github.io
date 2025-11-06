@@ -1,11 +1,7 @@
 ---
 import '@/styles/global.css';
-const { title = 'Prateek Bansal', description = 'Researcher • Engineer', url = 'https://prateekbansal97.github.io/' } = Astro.props;
-const og = {
-  image: `${url}/og.png`,
-  title,
-  description
-};
+const { title = 'Prateek Bansal', description = 'Researcher • Engineer', url = 'https://prateekbansal97.github.io' } = Astro.props;
+const og = { image: `${url}/og.png`, title, description };
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-pt-24" data-theme="system">
@@ -22,7 +18,6 @@ const og = {
     <link rel="icon" href="/favicon.ico" />
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <script is:inline>
-      // theme toggle: persist user preference
       const saved = localStorage.getItem('theme');
       if (saved === 'dark' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
@@ -36,7 +31,9 @@ const og = {
       <div class="container flex h-16 items-center justify-between">
         <a href="/" class="font-semibold">Prateek Bansal</a>
         <nav class="flex items-center gap-4 text-sm">
+          <!-- NEW: Featured anchor -->
           <a href="/#projects" class="hover:underline">Projects</a>
+          <a href="/#featured" class="hover:underline">Featured</a>
           <a href="/#publications" class="hover:underline">Publications</a>
           <a href="/#highlights" class="hover:underline">Highlights</a>
           <a href="/#contact" class="hover:underline">Contact</a>

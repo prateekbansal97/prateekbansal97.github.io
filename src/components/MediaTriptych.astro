@@ -1,17 +1,17 @@
 ---
 /**
  * Props:
+ *  - id?: string                // anchor id (default "featured")
+ *  - title?: string             // section heading (default "Featured")
  *  - covers: [{ src, title, caption, alt?, link? }, { ... }]
  *  - video: { src, poster?, title?, caption? }
- *  - aspect?: string            // e.g. "16 / 9" (optional; if given, uses fixed-tile mode)
- *  - height?: string            // CSS length or clamp; if given, uses fixed-tile mode
- *  - fit?: "cover" | "contain"  // how media fits in fixed-tile mode (default "cover")
- *
- * Behavior:
- *  - If NO aspect/height provided → behaves like CoverGallery (natural size; w-full h-auto).
- *  - If aspect or height provided → fixed-tile mode (object-fit).
+ *  - aspect?: string            // if set, fixed-tile mode
+ *  - height?: string            // if set, fixed-tile mode
+ *  - fit?: "cover" | "contain"  // in fixed-tile mode
  */
 const {
+  id = 'featured',
+  title = 'Featured',
   covers = [],
   video = {},
   aspect = undefined,
@@ -23,31 +23,18 @@ const c0 = covers[0];
 const c1 = covers[1];
 const vidId = `v-${Math.random().toString(36).slice(2, 8)}`;
 
-const galleryMode = !aspect && !height; // CoverGallery-like sizing when true
+const galleryMode = !aspect && !height;
 const fitClass = fit === 'contain' ? 'object-contain bg-black/5 dark:bg-white/5' : 'object-cover';
 const boxStyle = aspect ? `aspect-ratio:${aspect}` : height ? `height:${height}` : '';
 ---
-<section id="featured-media" class="mt-12">
-  <h2 class="text-2xl font-semibold">Featured Media</h2>
+<section id={id} class="mt-12">
+  <h2 class="text-2xl font-semibold">{title}</h2>
 
   <div class="mt-4 grid gap-4 md:grid-cols-3 items-stretch">
-    <!-- Cover 1 -->
     {c0 && (
       <figure class="card overflow-hidden p-0">
-        <a
-          href={c0.link || c0.src}
-          target="_blank"
-          rel="noopener"
-          class="block"
-          style={galleryMode ? undefined : boxStyle}
-        >
-          <img
-            src={c0.src}
-            alt={c0.alt || c0.title || 'Cover'}
-            class={galleryMode ? 'w-full h-auto block' : `h-full w-full ${fitClass} block`}
-            loading="lazy"
-            decoding="async"
-          />
+        <a href={c0.link || c0.src} target="_blank" rel="noopener" class="block" style={galleryMode ? undefined : boxStyle}>
+          <img src={c0.src} alt={c0.alt || c0.title || 'Cover'} class={galleryMode ? 'w-full h-auto block' : `h-full w-full ${fitClass} block`} loading="lazy" decoding="async" />
         </a>
         <figcaption class="p-3">
           <div class="font-medium">{c0.title}</div>
@@ -56,23 +43,10 @@ const boxStyle = aspect ? `aspect-ratio:${aspect}` : height ? `height:${height}`
       </figure>
     )}
 
-    <!-- Cover 2 -->
     {c1 && (
       <figure class="card overflow-hidden p-0">
-        <a
-          href={c1.link || c1.src}
-          target="_blank"
-          rel="noopener"
-          class="block"
-          style={galleryMode ? undefined : boxStyle}
-        >
-          <img
-            src={c1.src}
-            alt={c1.alt || c1.title || 'Cover'}
-            class={galleryMode ? 'w-full h-auto block' : `h-full w-full ${fitClass} block`}
-            loading="lazy"
-            decoding="async"
-          />
+        <a href={c1.link || c1.src} target="_blank" rel="noopener" class="block" style={galleryMode ? undefined : boxStyle}>
+          <img src={c1.src} alt={c1.alt || c1.title || 'Cover'} class={galleryMode ? 'w-full h-auto block' : `h-full w-full ${fitClass} block`} loading="lazy" decoding="async" />
         </a>
         <figcaption class="p-3">
           <div class="font-medium">{c1.title}</div>
@@ -81,35 +55,24 @@ const boxStyle = aspect ? `aspect-ratio:${aspect}` : height ? `height:${height}`
       </figure>
     )}
 
-    <!-- Video -->
     {video?.src && (
       <figure class="card overflow-hidden p-0">
         {galleryMode ? (
-          // CoverGallery-like: natural sizing
           <video
             id={vidId}
             class="w-full h-auto block"
             src={video.src}
             poster={video.poster || undefined}
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
+            autoplay muted loop playsinline preload="metadata"
           ></video>
         ) : (
-          // Fixed-tile mode
           <div class="block" style={boxStyle}>
             <video
               id={vidId}
               class={`h-full w-full ${fitClass} block`}
               src={video.src}
               poster={video.poster || undefined}
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
+              autoplay muted loop playsinline preload="metadata"
             ></video>
           </div>
         )}
@@ -124,16 +87,12 @@ const boxStyle = aspect ? `aspect-ratio:${aspect}` : height ? `height:${height}`
   </div>
 
   <script is:inline>
-    // Pause the video when not in view; resume when visible
     const vid = document.getElementById({JSON.stringify(vidId)});
     if (vid) {
       const io = new IntersectionObserver((entries) => {
         for (const e of entries) {
-          if (e.isIntersecting) {
-            vid.play().catch(() => {});
-          } else {
-            vid.pause();
-          }
+          if (e.isIntersecting) vid.play().catch(() => {});
+          else vid.pause();
         }
       }, { threshold: 0.25 });
       io.observe(vid);
