@@ -1,0 +1,41 @@
+---
+const {
+  src,
+  poster = '',
+  caption = '',
+  preload = 'metadata'
+} = Astro.props;
+// unique id so the inline script can target the right <video>
+const vidId = `v-${Math.random().toString(36).slice(2, 8)}`;
+---
+<figure class="card p-0 overflow-hidden">
+  <video
+    id={vidId}
+    class="w-full h-auto block"
+    src={src}
+    poster={poster || undefined}
+    autoplay
+    muted
+    loop
+    playsinline
+    preload={preload}
+  ></video>
+  {caption && <figcaption class="p-3 text-sm text-[color:var(--muted)]">{caption}</figcaption>}
+</figure>
+
+<script is:inline>
+  // Pause when off-screen; play when visible (saves battery/CPU)
+  const vid = document.getElementById({JSON.stringify(vidId)});
+  if (vid) {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          vid.play().catch(() => {});
+        } else {
+          vid.pause();
+        }
+      }
+    }, { threshold: 0.25 });
+    io.observe(vid);
+  }
+</script>

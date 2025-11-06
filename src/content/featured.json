@@ -1,0 +1,24 @@
+{
+  "covers": [
+    {
+      "src": "/covers/cover-1.jpg",
+      "title": "Smoothened Activation",
+      "caption": "Biophysical Journal, 2023",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0006349523001601",
+      "alt": "Journal cover featuring Smoothened Activation"
+    },
+    {
+      "src": "/covers/cover-2.jpg",
+      "title": "Supercharged GFP self Association",
+      "caption": "ACS Central Science, 2022",
+      "link": "https://pubs.acs.org/doi/full/10.1021/acscentsci.2c00730",
+      "alt": "Journal cover featuring Supercharged GFP self Association"
+    }
+  ],
+  "video": {
+    "src": "/media/loop.mp4",
+    "poster": "/media/loop-poster.jpg",
+    "title": "Smoothened cholesterol translocation",
+    "caption": "eLife, 2025."
+  }
+}

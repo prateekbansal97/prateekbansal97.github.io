@@ -2,16 +2,23 @@
 import Base from '@/layouts/Base.astro';
 import ProjectCard from '@/components/ProjectCard.astro';
 import PublicationItem from '@/components/PublicationItem.astro';
+import LoopVideo from '@/components/LoopVideo.astro';
+import CoverGallery from '@/components/CoverGallery.astro';
+import MediaTriptych from '@/components/MediaTriptych.astro';
 
 import profile from '@/content/profile.json';
 import highlights from '@/content/highlights.json';
 import projects from '@/content/projects.json';
 import publications from '@/content/publications.json';
+import media from '@/content/media.json';
+import covers from '@/content/covers.json';
+import featured from '@/content/featured.json';
 
 const title = `${profile.name} — ${profile.role}`;
 const description = profile.tagline;
 ---
 <Base {title} {description} url={profile.site}>
+
   <section class="grid gap-8 lg:grid-cols-[2fr,1fr] items-start">
     <div class="card p-8">
       <h1 class="text-3xl font-serif font-bold tracking-tight">{profile.name}</h1>
@@ -48,6 +55,8 @@ const description = profile.tagline;
     </ol>
   </section>
 
+  <!-- Journal covers gallery -->
+  {covers.length > 0 && <CoverGallery covers={covers} />}
   <section id="highlights" class="mt-12">
     <h2 class="text-2xl font-semibold">Highlights</h2>
     <ul class="mt-4 grid gap-4 md:grid-cols-2">
@@ -61,7 +70,12 @@ const description = profile.tagline;
       ))}
     </ul>
   </section>
+  
 
+<MediaTriptych
+    covers={featured?.covers ?? []}
+    video={featured?.video ?? {}}
+  />
   <section id="contact" class="mt-12 card p-8">
     <h2 class="text-2xl font-semibold">Contact</h2>
     <p class="mt-2 text-sm">Email: <a class="underline" href={`mailto:${profile.email}`}>{profile.email}</a></p>

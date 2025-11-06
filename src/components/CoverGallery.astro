@@ -1,0 +1,35 @@
+---
+/** props:
+ *  covers: Array<{ image: string; title: string; journal?: string; date?: string; link?: string; alt?: string; }>
+ */
+const { covers = [] } = Astro.props;
+---
+<section id="covers" class="mt-12">
+  <h2 class="text-2xl font-semibold">Journal Covers</h2>
+  <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {covers.map((c) => (
+      <li class="card overflow-hidden">
+        <a
+          href={c.link || c.image}
+          target="_blank"
+          rel="noopener"
+          class="block"
+          title={c.title}
+        >
+          <img
+            src={c.image}
+            alt={c.alt || `${c.title}${c.journal ? ` — ${c.journal}` : ''}`}
+            loading="lazy"
+            class="w-full h-auto block"
+          />
+        </a>
+        <div class="p-4">
+          <div class="font-medium">{c.title}</div>
+          <div class="text-sm text-[color:var(--muted)]">
+            {c.journal}{c.journal && c.date ? ' · ' : ''}{c.date}
+          </div>
+        </div>
+      </li>
+    ))}
+  </ul>
+</section>
