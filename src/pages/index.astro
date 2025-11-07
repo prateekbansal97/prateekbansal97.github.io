@@ -2,6 +2,7 @@
 import Base from '@/layouts/Base.astro';
 import ProjectCard from '@/components/ProjectCard.astro';
 import PublicationItem from '@/components/PublicationItem.astro';
+import PublicationCard from '@/components/PublicationCard.astro';
 import CoverGallery from '@/components/CoverGallery.astro';
 import MediaTriptych from '@/components/MediaTriptych.astro';
 
@@ -54,13 +55,15 @@ const description = profile.tagline;
     video={featured?.video ?? {}}
   />
 
-  <section id="publications" class="mt-12">
-    <h2 class="text-2xl font-semibold">Publications</h2>
-    <ol class="mt-4 space-y-4 list-decimal list-inside">
-      {publications.map((pub) => <PublicationItem pub={pub} />)}
-    </ol>
-  </section>
 
+  <section id="publications" class="mt-12">
+     <h2 class="text-2xl font-semibold">Publications</h2>
+    <ul class="mt-4 grid gap-4 md:grid-cols-2" role="list">
+      {publications.map((pub, i) => (
+       <PublicationCard pub={pub} index={i + 1} highlight={profile.name} />
+     ))}
+    </ul>
+    </section>
 
   <section id="highlights" class="mt-12">
     <h2 class="text-2xl font-semibold">Highlights</h2>
