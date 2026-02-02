@@ -3,7 +3,9 @@
   "version": "1.0.1",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=18.18" },           
+  "engines": {
+    "node": ">=18.18"
+  },
   "packageManager": "npm@11.6.2",
   "scripts": {
     "dev": "astro dev",
@@ -16,20 +18,22 @@
     "prebuild": "sh -c 'if [ -n \"$GITHUB_TOKEN\" ]; then node scripts/update-github.mjs; fi; if [ -n \"$SERPAPI_KEY\" ]; then node scripts/update-scholar.mjs; fi'"
   },
   "dependencies": {
-    "astro": "latest",
-    "@astrojs/tailwind": "latest",
     "@astrojs/sitemap": "latest",
-    "tailwindcss": "latest",
+    "@astrojs/tailwind": "latest",
     "@tailwindcss/typography": "latest",
+    "astro": "latest",
     "autoprefixer": "latest",
-    "postcss": "latest",
-    "reading-time": "latest",
-    "zod": "latest",
-    "marked": "latest",
-    "gray-matter": "latest",
     "cheerio": "latest",
     "cross-fetch": "latest",
-    "dotenv": "latest"
+    "dotenv": "latest",
+    "gray-matter": "latest",
+    "marked": "latest",
+    "postcss": "latest",
+    "reading-time": "latest",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "tailwindcss": "latest",
+    "zod": "latest"
   },
   "devDependencies": {
     "@biomejs/biome": "latest",
