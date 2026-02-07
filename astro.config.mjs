@@ -8,7 +8,7 @@ export default defineConfig({
   site: 'https://prateekbansal97.github.io', // update for canonical
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [[rehypeKatex, { trust: true }]],
     shikiConfig: {
       theme: 'dracula',
     },
