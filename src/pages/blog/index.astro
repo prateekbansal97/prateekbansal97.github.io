@@ -2,9 +2,9 @@
 import Base from '@/layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = (await getCollection('blog'))
+	.filter((post) => !post.data.series || post.data.order === 1)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Base title="Blog" description="My personal blog">
