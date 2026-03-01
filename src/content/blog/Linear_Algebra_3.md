@@ -29,8 +29,10 @@ where $a_{ij} \in \mathbb{R}$.
 
 Matrices can be $\Large \textbf{stacked}$ into column vectors as follows:
 
-<img src="/lin_alg_blog_fig4.png" alt="Linear System" style="width: 30%; max-width: 600px; margin: 20px auto; display: block;">
-<div style="text-align: center; font-size: 0.9em; color: gray; margin-top: -1em;">Stacking of matrices into column vectors.</div>
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/MatrixReshapeAnimation.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Matrix Addition and Multiplication
 
@@ -49,6 +51,11 @@ $$
 
 <div style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); font-family: 'KaTeX_Main', 'Times New Roman', serif; font-size: 1.2em;">(2)</div>
 </div>
+
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/MatrixAddition.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 For $\Large \textbf{matrix multiplication}$, we need to ensure that the number of columns in the first matrix is equal to the number of rows in the second matrix.
 

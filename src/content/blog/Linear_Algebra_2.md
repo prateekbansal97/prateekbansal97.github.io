@@ -7,7 +7,7 @@ series: 'Linear Algebra'
 order: 2
 ---
 
-Linear Equations are very useful in optimization problems, for example:
+$\Large \textbf{Linear Equations}$ are very useful in optimization problems, for example:
 
 A company produces products $N_1, \ldots,  N_n$ for which resources $R_1, \ldots, R_m$ are required. To produce a unit of product $N_j$, $a_{ij}$ units of resource $R_i$ are required, where $i \in \{1, \ldots, m\}$ and $j \in \{1, \ldots, n\}$.
 
@@ -41,13 +41,13 @@ $$
 
 where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$.
 
-Equation $(1)$ is the general form of a system of linear equations, and $x_1, \ldots, x_n$ are the unknowns of the system. Every $n-$tuple $(x_1, \ldots, x_n)$ that satisfies the system of equations is called a $\textbf{solution}$ to the system.
+Equation $(1)$ is the general form of a system of linear equations, and $x_1, \ldots, x_n$ are the unknowns of the system. Every $n-$tuple $(x_1, \ldots, x_n)$ that satisfies the system of equations is called a $\Large \textbf{solution}$ to the system.
 
 For a system of linear equations, there are three possible cases:
 
-1. The system has a $\textbf{unique solution}$.
-2. The system has $\textbf{no solution}$.
-3. The system has $\textbf{infinitely many solutions}$.
+1. The system has a $\Large \textbf{unique solution}$.
+2. The system has $\Large \textbf{no solution}$.
+3. The system has $\Large \textbf{infinitely many solutions}$.
 
 For example, consider the following system of linear equations:
 
@@ -100,6 +100,11 @@ $$
 
 
 Since the third equation is a linear combination of the first two equations, the system has $\textbf{infinitely many solutions}$.
+
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/LinearSystemSolutions.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 In general, for a system of equation in $n$ variables, it represents a line in $\mathbb{R}^n$. For example, consider the following system of linear equations in 2 variables:
 

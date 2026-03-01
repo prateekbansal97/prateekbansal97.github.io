@@ -31,3 +31,7 @@ $$\lambda_1 \boldsymbol{v}_1 + \lambda_2 \boldsymbol{v}_2 + \dots + \lambda_n \b
 2. If at least one of the vectors $\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_k$ is a zero vector, then the set of vectors is linearly dependent. The same holds if two vectors are identical.
 3. If at least one of the vectors $\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_k$ (where $\boldsymbol{x}_i \neq \boldsymbol{0}$ for all $i = 1, \dots, k$, $k \geq 2$) is a scalar multiple of another vector, $\boldsymbol{x}_i = \lambda \boldsymbol{x}_j$, $\lambda \in \mathbb{R}$, then the set of vectors is linearly dependent.
 4. In practice, $\textbf{Gaussian elimination}$ can be used to determine if a set of vectors is linearly independent or linearly dependent. If the row echelon form of the matrix has a pivot in every column, then the vectors are linearly independent. Otherwise, they are linearly dependent.
+
+
+<img src="/lin_alg_blog_linear_dependence.png" alt="Linear System" style="width: 120%; max-width: 900px; margin: 20px auto; display: block;">
+<div style="text-align: center; font-size: 0.9em; color: gray; margin-top: -1em;">Linearly Independent (a) and Linearly Dependent(b) sets of Vectors.</div>

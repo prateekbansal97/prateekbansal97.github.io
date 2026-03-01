@@ -62,4 +62,5 @@ $$\boldsymbol{x} \cdot \boldsymbol{y} = \boldsymbol{x}^\top \boldsymbol{y}; \qua
 
 Let $V = (\mathcal{V}, +, \cdot)$ be a vector space. A subset $\mathcal{U} \subseteq \mathcal{V}, \mathcal{U} \neq \emptyset$ is called a $\Large \textbf{vector subspace}$ if $(\mathcal{U}, +, \cdot)$ is also a vector space if $+$ and $\cdot$ are restricted to $\mathcal{U} \times \mathcal{U}$ and $\mathbb{R} \times \mathcal{U}$ respectively. 
 
-
+<img src="/lin_alg_blog_vector_subspace.png" alt="Linear System" style="width: 120%; max-width: 900px; margin: 20px auto; display: block;">
+<div style="text-align: center; font-size: 0.9em; color: gray; margin-top: -1em;">Vector Subspaces. The zero vector is always a subspace. The plane represents a subspace in R^3.</div>

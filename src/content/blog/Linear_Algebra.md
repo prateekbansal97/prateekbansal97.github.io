@@ -7,14 +7,14 @@ series: 'Linear Algebra'
 order: 1
 ---
 
-In Linear Algebra, a common approach is to consider a set of objects and a set of rules to manipulate them. Particularly, linear algebra deals with vectors, vector spaces, and linear transformations between them. 
+In Linear Algebra, a common approach is to consider a set of objects and a set of rules to manipulate them. Particularly, linear algebra deals with $\Large \textbf{vectors}$, $\Large \textbf{vector spaces}$, and $\Large \textbf{linear transformations}$ between them. 
 
 We know from school what a vector is. From an abstract point of view, any object that satisfies the following properties is a vector:
 
-1. Adding two vectors results in a vector in the same set.
-2. Multiplying a vector by a scalar results in a vector in the same set.
+1. $\Large \textbf{Adding two vectors}$ results in a vector in the same set.
+2. $\Large \textbf{Multiplying a vector by a scalar}$ results in a vector in the same set.
 
-If this is the case, then even polynomials of degree $n$ form a vector space, since we can add two polynomials of degree $n$ and the resulting polynomial will also be of degree $n$. Similarly, we can multiply a polynomial of degree $n$ by a scalar $\lambda \in \mathbf{\mathbb{R}}$ and the resulting polynomial will also be of degree $n$.
+If this is the case, then even $\Large \textbf{polynomials}$ of degree $n$ form a vector space, since we can add two polynomials of degree $n$ and the resulting polynomial will also be of degree $n$. Similarly, we can multiply a polynomial of degree $n$ by a scalar $\lambda \in \mathbf{\mathbb{R}}$ and the resulting polynomial will also be of degree $n$.
 
 <div style="position: relative; text-align: center;">
 
