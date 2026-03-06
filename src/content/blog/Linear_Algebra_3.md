@@ -67,6 +67,10 @@ $$
 \underbrace{\mathbf{A}}_{m \times n} \underbrace{\mathbf{B}}_{n \times p} = \underbrace{\mathbf{C}}_{m \times p}
 $$
 
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/MatrixMultiplication.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 $$
 c_{ij} = \displaystyle \sum_{k=1}^{n} a_{ik}b_{kj}, \quad \text{for } i \in \{1, \ldots, m\}, \quad j \in \{1, \ldots, p\}
@@ -74,6 +78,11 @@ $$
 
 <div style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); font-family: 'KaTeX_Main', 'Times New Roman', serif; font-size: 1.2em;">(3)</div>
 </div>
+
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/MatrixMultiplication.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 In such cases the product $\mathbf{BA}$ is not defined, since the number of columns in $\mathbf{B}$ is $p$ and the number of rows in $\mathbf{A}$ is $m$, and $p \neq m$.
 
@@ -112,6 +121,11 @@ $$
 
 <div style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); font-family: 'KaTeX_Main', 'Times New Roman', serif; font-size: 1.2em;">(4)</div>
 </div>
+
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/HadamardProduct.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 One of the ways to perform the Hadamard Product is to use `np.multiply:`
 

@@ -20,4 +20,5 @@ pnpm-debug.log*
 .vscode/*
 !.vscode/extensions.json
 scripts/manim_anim/media
+*.sh
 scripts/manim_anim/__pycache__
