@@ -19,6 +19,12 @@ Consider a set $\mathcal{G}$ together with a binary operation $\otimes$: $\mathc
 If additionally, for all $a, b \in \mathcal{G}$, $a \otimes b = b \otimes a$, then $G = (\mathcal{G}, \otimes)$ is called an $\Large \textbf{Abelian group}$.
 
 1. $(\mathbb{Z}, +)$ is a group.
+
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/IntegerGroup.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 2. $(\mathbb{N}_0, +)$ is not a group, since it does not have an inverse.
 3. $(\mathbb{Z}, \times)$ is not a group, since it does not have an inverse for any $z \in \mathbb{Z} \setminus \{-1, 1\}$.
 4. $(\mathbb{R}, \times)$ is not a group, since it does not have an inverse for $r \in \mathbb{R} = 0$.
@@ -57,6 +63,13 @@ $$\boldsymbol{x} \cdot \boldsymbol{y} = \boldsymbol{x} \boldsymbol{y}^\top; \qua
 
 and the $\Large \textbf{inner product}$ of $\boldsymbol{x}$ and $\boldsymbol{y}$ is given by
 $$\boldsymbol{x} \cdot \boldsymbol{y} = \boldsymbol{x}^\top \boldsymbol{y}; \quad \boldsymbol{x}^\top \boldsymbol{y} \in \mathbb{R}$$
+
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/VectorSpaceOperations.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 
 ## Vector Subspaces
 

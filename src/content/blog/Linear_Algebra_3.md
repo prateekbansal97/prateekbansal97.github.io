@@ -79,10 +79,10 @@ $$
 <div style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); font-family: 'KaTeX_Main', 'Times New Roman', serif; font-size: 1.2em;">(3)</div>
 </div>
 
-<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+<!-- <video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
   <source src="/MatrixMultiplication.mp4" type="video/mp4">
   Your browser does not support the video tag.
-</video>
+</video> -->
 
 In such cases the product $\mathbf{BA}$ is not defined, since the number of columns in $\mathbf{B}$ is $p$ and the number of rows in $\mathbf{A}$ is $m$, and $p \neq m$.
 
@@ -196,6 +196,15 @@ Some properties of transpose and inverse:
 8. $(\mathbf{A} \odot \mathbf{B})^\top = \mathbf{A}^\top \odot \mathbf{B}^\top$
 9. $(\mathbf{A} \odot \mathbf{B})^{-1} \neq \mathbf{A}^{-1} \odot \mathbf{B}^{-1}$
 
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/GeometricInverse.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<video controls loop autoplay muted playsinline style="width: 100%; max-width: 900px; margin: 20px auto; display: block;">
+  <source src="/GeometricTranspose.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Symmetric Matrix
 
